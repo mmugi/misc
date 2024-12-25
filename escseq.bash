@@ -3,9 +3,6 @@ lib_self='escseq.bash'
 if [ -z "${BASH_VERSION:-}" ]; then
     echo "${lib_self}: error: This library must be sourced in Bash."
     return 1 2>/dev/null || exit 1
-elif [ "${BASH_SOURCE[0]}" == "$0" ]; then
-    echo "${lib_self}: error: This library must be sourced, not executed directly."
-    exit 1
 fi
 
 if [[ -t 1 ]]; then
